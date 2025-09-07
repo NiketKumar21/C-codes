@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main() {
+int t;
+scanf("%d",&t);
+int i;
+for(i=1;i<=t;i=i+1)
+{
+    int x,o=0,y=0,g=0;
+    scanf("%d",&x);
+    char a[15];
+    scanf("%s",&a);
+   for(int k=0;a[k]!='\0';k=k+1)
+   {
+      if(a[k]=='C')
+      {
+          o=o+2;
+      }
+      else
+      {
+          if(a[k]=='D')
+          { o=o+1;
+          g=g+1;
+              
+          }
+          else
+          {
+              if(a[k]=='N')
+              {
+                  g=g+2;
+              }
+          }
+      }
+   }
+   
+   if(o>y&&o>g)
+   {
+       printf("%d\n",60*x);
+   }
+   else
+   {
+       if(g>o&&g>y)
+       {
+           printf("%d\n",40*x);
+       }
+       else
+       { 
+            printf("%d\n",55*x);
+           
+       }
+   }
+   
+}
+}
