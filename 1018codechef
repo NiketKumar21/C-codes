@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int main() {
+int t;
+scanf("%d",&t);
+int i;
+for(i=1;i<=t;i=i+1)
+{
+    int N,g,d,c=0,p,j,h=0;
+    scanf("%d",&N);
+    g=(N*2)-1;
+    int a[g];
+    
+    int k;
+    for(k=0;k<=g;k=k+1)
+    {
+        scanf("%d",&a[k]);
+        
+    }
+    
+    for(k=0;k<=g-c;k=k+1)
+    {
+        int z=1;
+        for(j=k+1;j<=g-c;j=j+1)
+        {
+            if(a[k]==a[j])
+            {
+                c=c+1;
+                z=z+1;
+                p=j;
+                for(d=p;d<=g-c;d=d+1)
+                {
+                    a[d]=a[d+1];
+                }
+                j=j-1;
+                if(z==3)
+                {
+                    h=h+1;
+                }
+            }
+        }
+        
+    }
+  
+    if(h>=1)
+        {
+            printf("No\n");
+        }
+        else
+        {
+            printf("Yes\n");
+        }
+    
+}
+
+}
+
